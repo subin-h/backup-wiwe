@@ -26,7 +26,7 @@ public class LoginRequestDto {
 
     public User touser(PasswordEncoder passwordEncoder) {
         return User.builder()
-                .username(username)
+                .userName(username)
                 .password(passwordEncoder.encode(password))
                 .authority(Authority.ROLE_USER)
                 .build();
